@@ -1,4 +1,5 @@
-baseURL = 'http://sreekanthc.com/'
+baseURL = 'https://sreekanthc.com/'
 languageCode = 'en-us'
 title = 'Sreekanth Chaliyeduth'
 theme = "PaperMod"
+

@@ -8,7 +8,7 @@ cover:
   # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
   alt: "<alt text>"
   caption: "<text>"
-  relative: true # To use relative path for cover image, used in hugo Page-bundles
+  relative: false # To use relative path for cover image, used in hugo Page-bundles
 
 ---
 
