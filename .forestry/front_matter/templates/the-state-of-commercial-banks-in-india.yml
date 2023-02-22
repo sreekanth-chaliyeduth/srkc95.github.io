@@ -3,8 +3,8 @@ label: The State of Commercial Banks in India
 hide_body: false
 fields:
 - type: text
-  name: title
-  label: title
+  name: Sreekanth_C
+  label: The State of Commercial Banks in India
 - type: datetime
   name: date
   label: date
