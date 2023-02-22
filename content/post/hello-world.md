@@ -1,20 +1,16 @@
 ---
-title: "Midjourney and turing test"
-date: 2022-09-18T10:51:50+05:30
-draft: false
+title: Midjourney and turing test
+date: 2022-09-18T10:51:50.000+05:30
 cover:
   image: "/Theyyam_fighting_under_vangoghs_starry_night.png"
-  # can also paste direct link from external site
-  # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
   alt: "<alt text>"
   caption: "<text>"
-  relative: false # To use relative path for cover image, used in hugo Page-bundles
+  relative: false
+draft: true
 
 ---
-
 Many of our cognitive science courses discussed about Turing test at different points of time. Discussions were full of arguments and counter arguments. According to the people who strongly believed machines can pass the Turing test, creating realistic art work was considered as one of the important milestone to pass this test. But after seeing the mind blowing results from #midjourney, I really want to go back and see what are the new arguments we can have.
 
 Prompt - Theyyam fighting under Van goghs starry night
 
 #artwork #cognitivescience #aiartwork
-
