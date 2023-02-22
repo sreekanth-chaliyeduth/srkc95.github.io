@@ -24,3 +24,5 @@ fields:
   - type: boolean
     name: relative
     label: relative
+pages:
+- content/post/The State of Commercial Banks in India.md
