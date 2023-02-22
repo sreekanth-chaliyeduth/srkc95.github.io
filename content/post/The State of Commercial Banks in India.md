@@ -1,7 +1,6 @@
 +++
 Sreekanth_C = ""
 date = ""
-draft = true
 [cover]
 alt = ""
 caption = ""
