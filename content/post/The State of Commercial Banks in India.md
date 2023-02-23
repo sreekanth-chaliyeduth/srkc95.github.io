@@ -17,10 +17,13 @@ Commercial banks are a crucial part of the Indian economy, providing financial s
 Key Insights:
 
 1. Growth of Banks: The total number of commercial banks in India has grown steadily over the last five years, from 1,36,175 in March 2017 to 1,54,472 in March 2022.
-2. State-wise Distribution: Maharashtra has the highest number of functioning offices of commercial banks, followed by Uttar Pradesh, Tamil Nadu, and Karnataka. The northeastern states of Arunachal Pradesh, Meghalaya, Mizoram, Nagaland, and Sikkim have the lowest number of functioning offices of commercial banks.
-3. Bank Group-wise Distribution: Public Sector Banks (PSBs) have the highest number of functioning offices of commercial banks, followed by Private Sector Banks (PVSBs) and Foreign Banks. The share of PVSBs and Foreign Banks in the total number of functioning offices of commercial banks has been increasing over the last five years.
-4. Population Group-wise Distribution: Urban areas have the highest number of functioning offices of commercial banks, followed by Semi-Urban, Rural, and Metropolitan areas. However, the share of Semi-Urban and Rural areas in the total number of functioning offices of commercial banks has been increasing over the last five years.
-5. Regional Distribution: The Western region of India has the highest number of functioning offices of commercial banks, followed by the Southern, Northern, and Eastern regions.
+
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/\~srkc95/58.embed"></iframe>
+
+1. State-wise Distribution: Maharashtra has the highest number of functioning offices of commercial banks, followed by Uttar Pradesh, Tamil Nadu, and Karnataka. The northeastern states of Arunachal Pradesh, Meghalaya, Mizoram, Nagaland, and Sikkim have the lowest number of functioning offices of commercial banks.
+2. Bank Group-wise Distribution: Public Sector Banks (PSBs) have the highest number of functioning offices of commercial banks, followed by Private Sector Banks (PVSBs) and Foreign Banks. The share of PVSBs and Foreign Banks in the total number of functioning offices of commercial banks has been increasing over the last five years.
+3. Population Group-wise Distribution: Urban areas have the highest number of functioning offices of commercial banks, followed by Semi-Urban, Rural, and Metropolitan areas. However, the share of Semi-Urban and Rural areas in the total number of functioning offices of commercial banks has been increasing over the last five years.
+4. Regional Distribution: The Western region of India has the highest number of functioning offices of commercial banks, followed by the Southern, Northern, and Eastern regions.
 
 Conclusion:
 
