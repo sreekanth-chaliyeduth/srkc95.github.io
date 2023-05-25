@@ -1,5 +1,5 @@
 baseURL = "https://sreekanthc.com/"
-title = "Sreekanth Chaliyeduth"
+title = "Sreekanth C"
 paginate = 5
 theme = "PaperMod"
 enableRobotsTXT = true
@@ -15,10 +15,10 @@ minifyOutput = true
 
 [params]
 env = "production"
-title = "Sreekanth Chaliyeduth"
-description = "ExampleSite description"
+title = "Sreekanth C"
+description = "Personal website of Sreekanth C"
 keywords = [ "Blog", "Portfolio", "PaperMod" ]
-author = "Me"
+author = "Sreekanth C"
 images = [ "<link or path of image for opengraph, twitter-cards>" ]
 DateFormat = "January 2, 2006"
 defaultTheme = "auto"
@@ -74,7 +74,7 @@ tocopen = false
 
   [[params.socialIcons]]
   name = "twitter"
-  url = "https://twitter.com/srkc95"
+  url = "https://twitter.com/sreekanthc_"
 
   [[params.socialIcons]]
   name = "github"
@@ -82,7 +82,7 @@ tocopen = false
 
   [[params.socialIcons]]
   name = "linkedin"
-  url = "https://stackoverflow.com"
+  url = "https://www.linkedin.com/in/sreekanth-chaliyeduth/m"
 
 [params.analytics.google]
 SiteVerificationTag = "XYZabc"
