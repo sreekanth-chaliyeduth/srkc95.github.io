@@ -2,7 +2,7 @@
 title: Midjourney and turing test
 date: 2022-09-18T10:51:50.000+05:30
 cover:
-  image: "/Theyyam_fighting_under_vangoghs_starry_night.png"
+  image: "static/Theyyam_fighting_under_vangoghs_starry_night.png"
   alt: "<alt text>"
   caption: "<text>"
   relative: false
