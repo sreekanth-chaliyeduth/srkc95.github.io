@@ -82,7 +82,7 @@ tocopen = false
 
   [[params.socialIcons]]
   name = "linkedin"
-  url = "https://www.linkedin.com/in/sreekanth-chaliyeduth/m"
+  url = "https://www.linkedin.com/in/sreekanth-chaliyeduth/"
 
 [params.analytics.google]
 SiteVerificationTag = "XYZabc"
