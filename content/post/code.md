@@ -14,7 +14,7 @@ This code is a Docker Compose configuration file that defines a service called "
 
 The primary purpose of this code is to create a Docker container running Ubuntu, set up Jenkins within it, and expose ports for Jenkins and other services to interact with it.
 
-``` python
+``` yaml
 version: '3.8'
 
 services:
