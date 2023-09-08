@@ -21,8 +21,8 @@ keywords = [ "Blog", "Portfolio", "PaperMod" ]
 author = "Sreekanth C"
 images = [ "<link or path of image for opengraph, twitter-cards>" ]
 DateFormat = "January 2, 2006"
-defaultTheme = "auto"
-disableThemeToggle = false
+defaultTheme = "dark"
+disableThemeToggle = true
 ShowReadingTime = true
 ShowShareButtons = true
 ShowPostNavLinks = true
@@ -38,8 +38,6 @@ hidemeta = false
 hideSummary = false
 showtoc = false
 tocopen = false
-#defaultTheme = dark
-disableThemeToggle = true
 
   [params.assets]
   favicon = "<link / abs url>"
