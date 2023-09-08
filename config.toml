@@ -38,6 +38,8 @@ hidemeta = false
 hideSummary = false
 showtoc = false
 tocopen = false
+defaultTheme = "dark"
+disableThemeToggle = true
 
   [params.assets]
   favicon = "<link / abs url>"
