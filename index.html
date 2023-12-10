@@ -6,17 +6,34 @@
     <title>Quote</title>
     <style>
         body {
-            background-color: #444;
-            color: white;
+            background-color: #f0f0f0; /* Light grey background for a modern look */
+            color: #333; /* Dark grey text for better readability */
             text-align: center;
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern font */
             padding: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        blockquote {
+            font-size: 1.5em; /* Larger text for emphasis */
+            border-left: 5px solid #0078d7; /* Adding a colored bar for a modern touch */
+            padding-left: 20px; /* Spacing for the left border */
+            margin: 0; /* Reset default margin */
+            color: #555; /* Slightly darker text color */
+        }
+
+        blockquote p {
+            margin: 0.5em 0; /* Spacing between lines */
         }
     </style>
 </head>
 <body>
     <blockquote>
-        <p>Pass on what you have learned. </p>
+        <p>Pass on what you have learned.</p>
         <p>- Yoda</p>
     </blockquote>
 </body>
