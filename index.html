@@ -2,65 +2,359 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
-    <title>Quote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Quote</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #9b59b6;
+            --background-color: #000000;
+            --text-color: #ffffff;
+            --card-bg: rgba(155, 89, 182, 0.1);
+            --gradient-start: #000000;
+            --gradient-end: #1a1a1a;
+            --hologram-color: #9b59b6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: #f0f0f0;
-            color: #333;
-            text-align: center;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            padding: 50px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            transition: background-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .light-beams {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .beam {
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                transparent,
+                var(--hologram-color),
+                transparent
+            );
+            opacity: 0.1;
+            animation: beam-move 8s linear infinite;
+        }
+
+        .beam:nth-child(1) {
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .beam:nth-child(2) {
+            left: 40%;
+            animation-delay: 2s;
+        }
+
+        .beam:nth-child(3) {
+            left: 60%;
+            animation-delay: 4s;
+        }
+
+        .beam:nth-child(4) {
+            left: 80%;
+            animation-delay: 6s;
+        }
+
+        @keyframes beam-move {
+            0% {
+                transform: translateY(-100%) scaleY(0);
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.1;
+            }
+            80% {
+                opacity: 0.1;
+            }
+            100% {
+                transform: translateY(100%) scaleY(1);
+                opacity: 0;
+            }
+        }
+
+        .holographic-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(90deg, transparent 0%, rgba(155, 89, 182, 0.05) 50%, transparent 100%),
+                linear-gradient(0deg, transparent 0%, rgba(155, 89, 182, 0.05) 50%, transparent 100%);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 1;
+            animation: grid-pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes grid-pulse {
+            0%, 100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 50% 50%, 
+                    rgba(155, 89, 182, 0.1) 0%,
+                    transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 40px 20px;
+            animation: fadeIn 1s ease-out;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            backdrop-filter: blur(2px);
+        }
+
+        .gif-container {
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 1.51829;
+            position: relative;
+            filter: hue-rotate(180deg) brightness(1.2) contrast(1.1);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 
+                0 0 20px rgba(155, 89, 182, 0.3),
+                0 0 40px rgba(155, 89, 182, 0.2);
+        }
+
+        .gif-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         blockquote {
-            font-size: 1.8em;
-            border-left: 10px solid #0078d7;
-            padding-left: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            line-height: 1.6;
+            padding: clamp(20px, 5vw, 40px);
             margin: 0;
-            color: #555;
-            background-color: rgba(0, 120, 215, 0.1);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            max-width: 60%;
-            padding: 20px;
+            position: relative;
+            background: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 
+                0 0 20px rgba(155, 89, 182, 0.3),
+                0 0 40px rgba(155, 89, 182, 0.2),
+                inset 0 0 20px rgba(155, 89, 182, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(155, 89, 182, 0.3);
+            animation: glow 2s ease-in-out infinite alternate;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 
+                    0 0 20px rgba(155, 89, 182, 0.3),
+                    0 0 40px rgba(155, 89, 182, 0.2),
+                    inset 0 0 20px rgba(155, 89, 182, 0.1);
+            }
+            to {
+                box-shadow: 
+                    0 0 30px rgba(155, 89, 182, 0.4),
+                    0 0 60px rgba(155, 89, 182, 0.3),
+                    inset 0 0 30px rgba(155, 89, 182, 0.2);
+            }
+        }
+
+        blockquote:hover {
+            transform: translateY(-5px);
         }
 
         blockquote p {
             margin: 0.5em 0;
+            text-shadow: 0 0 10px rgba(155, 89, 182, 0.5);
+        }
+
+        blockquote p:first-child {
+            color: var(--text-color);
+            position: relative;
+            padding-left: 30px;
         }
 
         blockquote p:first-child:before {
-            content: "“";
-            font-size: 2.5em;
-            line-height: 0;
-            vertical-align: -0.4em;
-            color: #0078d7;
-        }
-
-        blockquote p:last-child:after {
-            content: "”";
-            font-size: 2.5em;
-            line-height: 0;
-            vertical-align: -0.4em;
-            color: #0078d7;
+            content: """;
+            font-family: 'Playfair Display', serif;
+            font-size: 4em;
+            position: absolute;
+            left: -20px;
+            top: -20px;
+            color: var(--hologram-color);
+            opacity: 0.5;
+            text-shadow: 0 0 15px var(--hologram-color);
         }
 
         blockquote p:last-child {
             text-align: right;
             font-style: italic;
+            font-size: 0.6em;
+            color: var(--hologram-color);
+            margin-top: 20px;
+            text-shadow: 0 0 10px var(--hologram-color);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+                gap: 20px;
+            }
+            
+            .gif-container {
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gif-container {
+                max-width: 250px;
+            }
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .social-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--card-bg);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            border: 1px solid rgba(155, 89, 182, 0.3);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            box-shadow: 
+                0 0 20px rgba(155, 89, 182, 0.2),
+                inset 0 0 10px rgba(155, 89, 182, 0.1);
+        }
+
+        .social-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 
+                0 0 30px rgba(155, 89, 182, 0.3),
+                inset 0 0 15px rgba(155, 89, 182, 0.2);
+            text-shadow: 0 0 10px var(--hologram-color);
+        }
+
+        .social-button i {
+            font-size: 1.2em;
+            color: var(--hologram-color);
+        }
+
+        @media (max-width: 768px) {
+            .social-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .social-button {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
 <body>
-    <blockquote>
-        <p>Pass on what you have learned.</p>
-        <p>- Yoda</p>
-    </blockquote>
+    <div class="light-beams">
+        <div class="beam"></div>
+        <div class="beam"></div>
+        <div class="beam"></div>
+        <div class="beam"></div>
+    </div>
+    <div class="holographic-grid"></div>
+    <div class="container">
+        <div class="gif-container">
+            <div class="tenor-gif-embed" data-postid="11258757941982430696" data-share-method="host" data-aspect-ratio="1.51829" data-width="100%">
+                <a href="https://tenor.com/view/healer-gif-11258757941982430696">Healer GIF</a>
+                from <a href="https://tenor.com/search/healer-gifs">Healer GIFs</a>
+            </div>
+            <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </div>
+        <blockquote>
+            <p>Pass on what you have learned.</p>
+            <p>- Yoda</p>
+        </blockquote>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/sreekanth-chaliyeduth/" target="_blank" rel="noopener noreferrer" class="social-button">
+                <i class="fab fa-linkedin"></i>
+                Connect on LinkedIn
+            </a>
+        </div>
+    </div>
 </body>
 </html>
